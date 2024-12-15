@@ -1,4 +1,114 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  max-width: 600px;
+}
+
+.bottle img {
+  max-height: 400px;
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.text-flex {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around;
+  margin-right: 30px;
+}
+
+.text h2 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color: hsl(228, 12%, 48%);
+}
+
+.text h1 {
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+  font-size: 2.3rem;
+}
+
+.text span {
+  font-family: "Fraunces", serif;
+  position: relative;
+}
+
+.sale-price {
+  color: hsl(158, 36%, 37%);
+  font-size: 2rem;
+}
+
+.original-price {
+  color: hsl(228, 12%, 48%);
+  font-size: 0.75rem;
+  text-decoration: line-through;
+  margin-left: 16px;
+  position: absolute;
+  bottom: 5px;
+}
+
+button {
+  height: 40px;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: hsl(158, 34%, 17%);
+  cursor: pointer;
+}
+
+button img {
+  margin-right: 10px;
+}
+
+@media (width <= 700px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    max-width: 600px;
+    margin: 24px 24px;
+    border-radius: 12px;
+  }
+  .bottle img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+  }
+  .text{
+    padding: 8px 16px 0 16px;
+  }
 }
